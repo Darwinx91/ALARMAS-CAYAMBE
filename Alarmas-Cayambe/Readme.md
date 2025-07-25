@@ -9,9 +9,7 @@ Guía para la instalación, configuración y ejecución de la API del proyecto *
 Este proyecto fue realizado en el año 2025 , con el fin de mejorar la seguridad de las personas que viven en la ciudad de Cayambe , Ecuador
 la base tecnica de este fue html Css y JavaScript , Como bakend se uso Firebase claund y como base de datos se uso Firebase Realtime Database
 
-## Contribuidores
 
-1. [Omar Sani](https://github.com/sonick-s/)
 
 ## Deploy
 

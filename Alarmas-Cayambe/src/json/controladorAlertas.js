@@ -1,9 +1,10 @@
 import { getAllAlerts, updateAlert, subscribeAlerts } from "./crudAlertas.js";
-import { getAllAlarmas } from "./crudAlarmas.js";
+import { getAllAlarmas, updateAlarma } from "./crudAlarmas.js";
 
 let markerAlarma = null; // marcador global para la alarma actual
 let grupoMarcadores = null;
 let alarmaMasCercana = null;
+let alarmaMasCercanaId = null;
 
 async function mostrarAlertas() {
   try {
@@ -118,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const lat = parseFloat(alerta.lat);
     const lng = parseFloat(alerta.lng);
     const radarIcon = L.icon({
-      iconUrl: '../assets/img/alerta.gif',
+      iconUrl: '../assets/img/ubicacion.png',
       iconSize: [50, 50],
       iconAnchor: [16, 16],
       popupAnchor: [0, -16]
@@ -140,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     mostrarUbicacionesEnMapa();
     mostrarAlarmaMasCercana(lat, lng);
-    
+    activarAlarmaMasCercana();
 
   }
 
@@ -186,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const lng = parseFloat(alerta.lng);
 
     const radarIcon = L.icon({
-      iconUrl: '../assets/img/alerta.gif',
+      iconUrl: '../assets/img/ubicacion.png',
       iconSize: [40, 40],
       iconAnchor: [16, 16],
       popupAnchor: [0, -16]
@@ -226,7 +227,7 @@ function calcularDistancia(lat1, lon1, lat2, lon2) {
       Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
       Math.sin(dLon / 2) * Math.sin(dLon / 2);
   const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  return R * c; // Distancia en metros
+  return R * c; 
 }
 
 // Función para mostrar la alarma más cercana
@@ -249,24 +250,20 @@ async function mostrarAlarmaMasCercana(latReferencia, lonReferencia) {
 
       if (distancia <= 10000 && distancia < distanciaMinima) {
         distanciaMinima = distancia;
-        alarmaMasCercana = { ...alarma, lat, lng }; // guardamos también los valores parseados
+        alarmaMasCercana = { ...alarma, lat, lng }; 
       }
     }
   }
 
   if (alarmaMasCercana) {
     console.log(`Alarma más cercana (ID: ${alarmaMasCercana.id}) a ${distanciaMinima.toFixed(2)} m`);
-
-    // Definir el icono del marcador con color personalizado
     const marcadorIcono = L.icon({
-      iconUrl: '../assets/img/ubicacion.gif',
+      iconUrl: '../assets/img/alarma.png',
       iconSize: [50, 50],
       iconAnchor: [16, 16],
       popupAnchor: [0, -16],
       iconColor: 'red'
     });
-
-    // Crear el marcador con el icono personalizado
     L.marker([alarmaMasCercana.lat, alarmaMasCercana.lng], { icon: marcadorIcono })
       .addTo(map)
       .bindPopup(`Alarma más cercana<br>Name: ${alarmaMasCercana.name}<br>${alarmaMasCercana.ubicacion}`)
@@ -275,6 +272,7 @@ async function mostrarAlarmaMasCercana(latReferencia, lonReferencia) {
     console.log("No hay alarmas dentro de un radio de 10 km.");
   }
   if (!alarmaMasCercana) return;
+  alarmaMasCercanaId = alarmaMasCercana.id;
 }
 
 
@@ -371,4 +369,23 @@ function mostrarHistorialEnTabla() {
             tbody.appendChild(fila);
         });
     });
+}
+
+async function activarAlarmaMasCercana() {
+  if (!alarmaMasCercanaId) {
+      console.warn("No hay una alarma cercana definida.");
+      return false;
+  }
+
+  const actualizacionExitosa = await updateAlarma(alarmaMasCercanaId, {
+    estado: true
+  });
+
+  if (actualizacionExitosa) {
+      console.log(`Alarma con ID ${alarmaMasCercanaId} activada correctamente.`);
+  } else {
+      console.error(`No se pudo activar la alarma con ID ${alarmaMasCercanaId}.`);
+  }
+
+  return actualizacionExitosa;
 }
