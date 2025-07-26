@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "939990289326",
+    "firebase_url": "https://emergencybuttonapp-435f8-default-rtdb.firebaseio.com",
+    "project_id": "emergencybuttonapp-435f8",
+    "storage_bucket": "emergencybuttonapp-435f8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:939990289326:android:d7c2b1494f11a5710b963f",
+        "android_client_info": {
+          "package_name": "com.example.emergencybuttonapp1_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "939990289326-3bhpjkl5gd985f6vr97vlbcd15p4orsg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.emergencybuttonapp1_1",
+            "certificate_hash": "802b74a4e51d19ba44739f140612751352d92382"
+          }
+        },
+        {
+          "client_id": "939990289326-t2pv5a4u2usko1uei2m4necpidjvmfdd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd9e3prXQdqVcKmzUquFIot6egmHH1PRQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "939990289326-t2pv5a4u2usko1uei2m4necpidjvmfdd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

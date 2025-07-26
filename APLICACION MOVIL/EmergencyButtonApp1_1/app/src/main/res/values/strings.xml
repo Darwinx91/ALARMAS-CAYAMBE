@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EmergencyButtonApp</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="back_icon_description">Descripción del icono de retroceso</string>
+    <string name="profile_picture_description">Descripción de la imagen de perfil</string>
+
+</resources>

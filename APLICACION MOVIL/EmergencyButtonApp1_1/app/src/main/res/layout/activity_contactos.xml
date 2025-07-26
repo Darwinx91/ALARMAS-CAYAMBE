@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_arrow_back"
+        android:contentDescription="@string/back_icon_description"
+        android:clickable="true"
+        android:focusable="true" />
+    <EditText
+        android:id="@+id/et_nombre_contacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del contacto" />
+
+    <EditText
+        android:id="@+id/et_numero_contacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Número del contacto"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/btn_agregar_contacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar Contacto" />
+
+    <Button
+        android:id="@+id/btn_seleccionar_contacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar desde Contactos" />
+
+    <ListView
+        android:id="@+id/lv_contactos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

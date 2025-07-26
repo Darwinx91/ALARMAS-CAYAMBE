@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Ubicaciones</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script type="module" src="../json/controladorAlertas.js"></script>
+    <link rel="stylesheet" href="../css/vistaInsidencia.css">
+</head>
+
+<body>
+    <!-- contenedor del Mapa -->
+    <div class="container">
+        <div id="nav-container"></div>
+        <main class="main-content">
+            <div id="map"></div>
+        </main>
+        <div id="bar-container"></div>
+    </div>
+
+    <div class="floating-bar">
+        <h3 style="text-align:center">Información de la Alertas</h3>
+        <div id="contenedor-alertas" style="max-height: 600px; overflow-y: auto; margin-bottom: 10px;"></div>
+        <!-- Botón con una imagen -->
+        <button id="boton_historial" class="boton-historial">
+            <img src="../assets/img/historial.png" alt="Mostrar Información"
+                style="width: 30px; height: 30px; cursor: pointer;">
+        </button>
+
+        <footer>
+            <p> 2025 Alarma Emart ECU911
+            </p>
+        </footer>
+    </div>
+
+    <div class="detalle-alerta">
+        <h4>Detalles de la Alerta</h4>
+        <p><strong>ID:</strong> <span id="alerta-id2"></span></p>
+        <p><strong>Hora:</strong> <span id="alerta-hora"></span></p>
+        <p><strong>Dirección:</strong> <span id="alerta-direccion"></span></p>
+        <p><strong>Coordenadas:</strong> <span id="alerta-coordenadas"></span></p>
+        <p><strong>Contacto:</strong> <span id="alerta-contacto"></span></p>
+        <p><strong>Teléfono:</strong> <span id="alerta-telefono"></span></p>
+        <input type="button" id="alerta-button" value="Atender Alerta">
+    </div>
+
+<!-- Modal a la derecha -->
+<div id="modal_historial" class="modal-historial">
+    <div class="modal-contenido">
+        <span id="cerrar_modal" class="cerrar-modal">&times;</span>
+        <h2>Historial</h2>
+        <table class="table_historial">
+            <thead class="table_historial_head">
+                <tr>
+                    <th>Hora</th>
+                    <th>Dirección</th>
+                    <th>Coordenadas</th>
+                    <th>Contacto</th>
+                    <th>Teléfono</th>
+                </tr>
+            </thead>
+            <tbody class="table_historial_body">
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+</body>
+
+</html>

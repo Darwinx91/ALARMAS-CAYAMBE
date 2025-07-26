@@ -1,0 +1,141 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_back"
+                android:contentDescription="@string/back_icon_description"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Perfil"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Introduce tu nombre"
+                android:textColor="@color/black"
+                android:padding="8dp"
+                android:background="@drawable/underline" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Número Celular"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Introduce tu número"
+                android:textColor="@color/black"
+                android:padding="8dp"
+                android:background="@drawable/underline" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Dirección"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_pronouns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dirección"
+                android:textColor="@color/black"
+                android:padding="8dp"
+                android:background="@drawable/underline" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Cédula o Pasaporte"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cédula de identidad"
+                android:textColor="@color/black"
+                android:padding="8dp"
+                android:background="@drawable/underline" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#007AFF"
+            android:text="Guardar cambios"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Cerrar Sesión" />
+
+        <Button
+            android:id="@+id/btnEliminarCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eliminar Cuenta"
+            android:backgroundTint="#FF0000"
+            android:textColor="#FFFFFF" />
+
+
+    </LinearLayout>
+
+</ScrollView>
