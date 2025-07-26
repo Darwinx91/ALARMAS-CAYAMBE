@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "949843163488",
+    "project_id": "alarmasmart-204e2",
+    "storage_bucket": "alarmasmart-204e2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949843163488:android:168e8d84e07267a70dc605",
+        "android_client_info": {
+          "package_name": "com.example.emergencybuttonapp1_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi4lC3s-prf_OLtvw4zwUj26obuotnQUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

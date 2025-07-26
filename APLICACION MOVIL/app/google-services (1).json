@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "949843163488",
+    "firebase_url": "https://alarmasmart-204e2-default-rtdb.firebaseio.com",
+    "project_id": "alarmasmart-204e2",
+    "storage_bucket": "alarmasmart-204e2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949843163488:android:168e8d84e07267a70dc605",
+        "android_client_info": {
+          "package_name": "com.example.emergencybuttonapp1_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949843163488-01hn15nahn7m8e4qvq0ibj3m6g1gnbtb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.emergencybuttonapp1_1",
+            "certificate_hash": "9366a9fd98878ee85db6e0c371a667d971c28f17"
+          }
+        },
+        {
+          "client_id": "949843163488-l197l69glbirh5os4g30mpmhlv7avah7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi4lC3s-prf_OLtvw4zwUj26obuotnQUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949843163488-l197l69glbirh5os4g30mpmhlv7avah7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
