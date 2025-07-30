@@ -2,6 +2,8 @@ import { createAlarma, subscribeAlarmas, getAlarmaById, updateAlarma, getAllAlar
 let map;
 let markerAlarma = null; 
 let grupoMarcadores = null;
+let modoSeleccionUbicacion = false; // Variable para controlar el modo de selección
+let marcadorSeleccion = null; // Marcador temporal para mostrar la ubicación seleccionada
 
 //Verificar si esta registrado antes de ingresar a la pagina
 document.addEventListener("DOMContentLoaded", () => {
@@ -42,6 +44,13 @@ function initMap() {
     map.boxZoom.disable();
     map.keyboard.disable();
 
+    // Agregar evento de clic para selección de ubicación
+    map.on('click', function(e) {
+        if (modoSeleccionUbicacion) {
+            seleccionarUbicacionEnMapa(e.latlng.lat, e.latlng.lng);
+        }
+    });
+
     document.getElementById('loading').style.display = 'none';
 }
 
@@ -65,14 +74,125 @@ function cargarYRenderizarAlarmas() {
 
 //Funciones para el Modal de agregar ubicaciones
 function openLocationModal() {
-    document.getElementById("locationModal").style.display = "block";
+    // En lugar de abrir el modal inmediatamente, activar modo de selección
+    modoSeleccionUbicacion = true; // Habilitar modo de selección
+    document.body.style.cursor = 'crosshair'; // Cambiar cursor para indicar modo de selección
+    // Mostrar mensaje informativo
+    mostrarMensajeSeleccion();
 }
 window.openLocationModal = openLocationModal;
 
 function closeLocationModal() {
     document.getElementById("locationModal").style.display = "none";
+    modoSeleccionUbicacion = false; // Deshabilitar modo de selección
+    document.body.style.cursor = 'default'; // Restaurar cursor
+    // Limpiar marcador de selección
+    if (marcadorSeleccion) {
+        map.removeLayer(marcadorSeleccion);
+        marcadorSeleccion = null;
+    }
+    // Ocultar mensaje informativo
+    ocultarMensajeSeleccion();
 }
 window.closeLocationModal = closeLocationModal;
+
+// Función para seleccionar ubicación en el mapa
+function seleccionarUbicacionEnMapa(lat, lng) {
+    // Limpiar marcador anterior si existe
+    if (marcadorSeleccion) {
+        map.removeLayer(marcadorSeleccion);
+    }
+    
+    // Crear nuevo marcador en la ubicación seleccionada
+    marcadorSeleccion = L.marker([lat, lng], {
+        icon: L.divIcon({
+            className: 'marcador-seleccion',
+            html: '<div style="background-color: #ff4444; width: 20px; height: 20px; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.5);"></div>',
+            iconSize: [20, 20],
+            iconAnchor: [10, 10]
+        })
+    }).addTo(map);
+    
+    // Mostrar mensaje de confirmación
+    mostrarConfirmacionSeleccion(lat, lng);
+    
+    // Abrir el modal después de seleccionar la ubicación
+    setTimeout(() => {
+        document.getElementById("locationModal").style.display = "block";
+        // Llenar los campos del formulario
+        document.getElementById('locationLat').value = lat.toFixed(6);
+        document.getElementById('locationLng').value = lng.toFixed(6);
+        // Deshabilitar modo de selección
+        modoSeleccionUbicacion = false;
+        document.body.style.cursor = 'default';
+        ocultarMensajeSeleccion();
+    }, 1000); // Pequeño delay para que el usuario vea la confirmación
+}
+
+// Función para mostrar mensaje de instrucciones
+function mostrarMensajeSeleccion() {
+    // Crear elemento de mensaje si no existe
+    if (!document.getElementById('mensaje-seleccion')) {
+        const mensaje = document.createElement('div');
+        mensaje.id = 'mensaje-seleccion';
+        mensaje.style.cssText = `
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2196F3;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            z-index: 10000;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        `;
+        mensaje.textContent = '🖱️ Haz clic en el mapa para seleccionar la ubicación y abrir el formulario';
+        document.body.appendChild(mensaje);
+    }
+}
+
+// Función para ocultar mensaje de instrucciones
+function ocultarMensajeSeleccion() {
+    const mensaje = document.getElementById('mensaje-seleccion');
+    if (mensaje) {
+        mensaje.remove();
+    }
+}
+
+// Función para mostrar confirmación de selección
+function mostrarConfirmacionSeleccion(lat, lng) {
+    // Crear elemento de confirmación si no existe
+    if (!document.getElementById('confirmacion-seleccion')) {
+        const confirmacion = document.createElement('div');
+        confirmacion.id = 'confirmacion-seleccion';
+        confirmacion.style.cssText = `
+            position: fixed;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            z-index: 10000;
+            font-size: 14px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        `;
+        document.body.appendChild(confirmacion);
+    }
+    
+    const confirmacion = document.getElementById('confirmacion-seleccion');
+    confirmacion.textContent = `✅ Ubicación seleccionada: ${lat.toFixed(6)}, ${lng.toFixed(6)} - Abriendo formulario...`;
+    
+    // Ocultar mensaje después de 3 segundos
+    setTimeout(() => {
+        if (confirmacion) {
+            confirmacion.remove();
+        }
+    }, 3000);
+}
 
 function capturarDatosForm(event){
     event.preventDefault();
@@ -93,6 +213,11 @@ function capturarDatosForm(event){
     alert(message);
     closeLocationModal();
     form.reset();
+    // Limpiar marcador de selección después de guardar
+    if (marcadorSeleccion) {
+        map.removeLayer(marcadorSeleccion);
+        marcadorSeleccion = null;
+    }
 }
 
 if (window.idAlarmaEditar) {
@@ -146,7 +271,17 @@ function renderizarAlarmas(alarmasObj) {
     }
 
     window.abrirModalEditar = async function(id) {
-        openLocationModal();
+        // Para editar, abrir el modal directamente sin modo de selección
+        document.getElementById("locationModal").style.display = "block";
+        modoSeleccionUbicacion = false; // Deshabilitar modo de selección para edición
+        document.body.style.cursor = 'default';
+        ocultarMensajeSeleccion();
+        
+        // Limpiar marcador de selección al editar
+        if (marcadorSeleccion) {
+            map.removeLayer(marcadorSeleccion);
+            marcadorSeleccion = null;
+        }
         if (typeof getAlarmaById === 'function') {
             const alarma = await getAlarmaById(id);
             if (alarma) {

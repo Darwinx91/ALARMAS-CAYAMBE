@@ -1,8 +1,4 @@
 {
-  "alarmas": {
-    "hospital": 0,
-    "remonta": "0"
-  },
   "alerts": {
     "-OVPDcOHmPVgZbaVZuZe": {
       "address": "2VR5+82W, Cayambe, Ecuador",
@@ -23,6 +19,7 @@
     "-OVPMTPgtBw2T5fZsOJ0": {
       "address": "2VR5+82W, Cayambe, Ecuador",
       "date": "2025-07-17",
+      "estado": false,
       "latitude": 0.040841666666666665,
       "longitude": -78.14254833333332,
       "time": "16:50:17"
@@ -30,6 +27,7 @@
     "-OVTpn79iS5NaK0YZj7p": {
       "address": "",
       "date": "2025-07-18",
+      "estado": false,
       "latitude": 0,
       "longitude": 0,
       "time": "13:41:16"
@@ -37,6 +35,7 @@
     "-OVec1_B-zeor9CoaSTr": {
       "address": "",
       "date": "2025-07-20",
+      "estado": false,
       "latitude": 0,
       "longitude": 0,
       "time": "20:36:36"
@@ -44,6 +43,7 @@
     "-OVecJ4kEu710mP0Bxlg": {
       "address": "",
       "date": "2025-07-20",
+      "estado": false,
       "latitude": 0,
       "longitude": 0,
       "time": "20:37:47"
@@ -51,6 +51,7 @@
     "-OVecTIPd_udy5E_WnzF": {
       "address": "",
       "date": "2025-07-20",
+      "estado": false,
       "latitude": 0,
       "longitude": 0,
       "time": "20:38:29"
@@ -58,6 +59,7 @@
     "-OVegoVDh7aW1HKJZqyT": {
       "address": "",
       "date": "2025-07-21",
+      "estado": false,
       "latitude": 0,
       "longitude": 0,
       "time": "01:57:24"
@@ -65,66 +67,578 @@
     "-OVem_MGsMwHpeLX3Rr_": {
       "address": "2R9P+3WP, Cayambe, Ecuador",
       "date": "2025-07-20",
+      "estado": false,
       "latitude": 0.01663,
       "longitude": -78.162255,
       "time": "21:22:38"
+    },
+    "-OVjMR7K-x1uVPYEsq1_": {
+      "address": "",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0,
+      "longitude": 0,
+      "time": "18:42:09"
+    },
+    "-OVjN29_u5bjkj8evfeJ": {
+      "address": "3V25+J8H, Av. Luis Cordero, Cayambe, Ecuador",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0.05139166666666666,
+      "longitude": -78.14128666666667,
+      "time": "18:44:49"
+    },
+    "-OVjO6VE9aNFB5FSJLTh": {
+      "address": "3V25+J8H, Av. Luis Cordero, Cayambe, Ecuador",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0.05143166666666667,
+      "longitude": -78.14120166666666,
+      "time": "18:49:29"
+    },
+    "-OVjP_nKDZ_38Mb13MGa": {
+      "address": "3V25+J8H, Av. Luis Cordero, Cayambe, Ecuador",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0.051345,
+      "longitude": -78.141245,
+      "time": "18:55:55"
+    },
+    "-OVjU0nABgpxKFuxXl2D": {
+      "address": "3V25+J8H, Av. Luis Cordero, Cayambe, Ecuador",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0.05141333333333333,
+      "longitude": -78.14123333333333,
+      "time": "19:15:18"
+    },
+    "-OVjWz822LiLtm0I7JPw": {
+      "address": "",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0,
+      "longitude": 0,
+      "time": "19:28:15"
+    },
+    "-OVjXJs6XUDvY1_vSVPf": {
+      "address": "3V25+J8H, Av. Luis Cordero, Cayambe, Ecuador",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0.05144166666666667,
+      "longitude": -78.14122166666667,
+      "time": "19:29:43"
+    },
+    "-OVjZjCCynGnM5tWMlVi": {
+      "address": "",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0,
+      "longitude": 0,
+      "time": "19:40:16"
+    },
+    "-OVjZyKKFGbkF-I2xUwh": {
+      "address": "",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0,
+      "longitude": 0,
+      "time": "19:41:18"
+    },
+    "-OVj_B3Qi3tFfEZQCN6M": {
+      "address": "",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0,
+      "longitude": 0,
+      "time": "19:42:14"
+    },
+    "-OVj_RPAEog-TCs8z0Rl": {
+      "address": "2VJ3+XW3, Abeto, Cayambe, Ecuador",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0.03229201,
+      "longitude": -78.14515397,
+      "time": "19:43:21"
+    },
+    "-OVjqnUqCBc2SMaoE4yv": {
+      "address": "3V25+J8H, Av. Luis Cordero, Cayambe, Ecuador",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0.051405,
+      "longitude": -78.14126,
+      "time": "20:59:11"
+    },
+    "-OVjqzXylAhxW05easxU": {
+      "address": "3V25+J8H, Av. Luis Cordero, Cayambe, Ecuador",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0.051405,
+      "longitude": -78.14126,
+      "time": "21:00:00"
+    },
+    "-OVjrh9q87qiBaZ8KOJh": {
+      "address": "2VJ3+WPF, Cayambe, Ecuador",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0.03229408,
+      "longitude": -78.14576415,
+      "time": "21:03:08"
+    },
+    "-OVjsrZ0b6L4OGrZ5rif": {
+      "address": "3V25+J8H, Av. Luis Cordero, Cayambe, Ecuador",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0.051405,
+      "longitude": -78.14126,
+      "time": "21:08:12"
+    },
+    "-OVjtZrh1kRVhvL9-Kjk": {
+      "address": "2VJ3+WPF, Cayambe, Ecuador",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0.03229408,
+      "longitude": -78.14576415,
+      "time": "21:11:19"
+    },
+    "-OVjuFXrrn_UZC_y73Cj": {
+      "address": "",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0,
+      "longitude": 0,
+      "time": "21:14:17"
+    },
+    "-OVjuP0Knppqeeyl6wZI": {
+      "address": "3V25+J8H, Av. Luis Cordero, Cayambe, Ecuador",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0.05147,
+      "longitude": -78.14124166666667,
+      "time": "21:14:56"
+    },
+    "-OVjwvP5THWYZ2PzuuoH": {
+      "address": "2VJ3+WPF, Cayambe, Ecuador",
+      "date": "2025-07-21",
+      "estado": false,
+      "latitude": 0.03229408,
+      "longitude": -78.14576415,
+      "time": "21:25:57"
+    },
+    "-OVoWA_6inuENbmMeAge": {
+      "address": "",
+      "date": "2025-07-22",
+      "estado": false,
+      "latitude": 0,
+      "longitude": 0,
+      "time": "18:42:49"
+    },
+    "-OVok-T3isOH9exFxghm": {
+      "address": "",
+      "date": "2025-07-22",
+      "estado": false,
+      "latitude": 0,
+      "longitude": 0,
+      "time": "19:47:36"
+    },
+    "-OVolLsroJsB3tdJTyiw": {
+      "address": "3V25+574, Cayambe, Ecuador",
+      "date": "2025-07-22",
+      "estado": false,
+      "latitude": 0.050435,
+      "longitude": -78.14092666666667,
+      "time": "19:53:30"
+    },
+    "-OVp4xtBQq-DPe0-e7OV": {
+      "address": "",
+      "date": "2025-07-22",
+      "estado": false,
+      "latitude": 0.05143166666666667,
+      "longitude": -78.14128333333333,
+      "time": "21:23:32"
+    },
+    "-OVu4fMm7i4R8FoKmDxH": {
+      "address": "",
+      "date": "2025-07-23",
+      "estado": false,
+      "latitude": 0,
+      "longitude": 0,
+      "time": "20:40:23"
+    },
+    "-OVu4mDqnKZXGJ-ROWIo": {
+      "address": "3V25+G92, Av. Luis Cordero, Cayambe, Ecuador",
+      "date": "2025-07-23",
+      "estado": false,
+      "latitude": 0.05129333333333333,
+      "longitude": -78.14127833333333,
+      "time": "20:40:51"
+    },
+    "-OVu6SErWW2205DEPcq8": {
+      "address": "",
+      "date": "2025-07-23",
+      "estado": false,
+      "latitude": 0,
+      "longitude": 0,
+      "time": "20:48:10"
+    },
+    "-OVu6bJww2geeGrAiWza": {
+      "address": "3V25+G92, Av. Luis Cordero, Cayambe, Ecuador",
+      "date": "2025-07-23",
+      "estado": false,
+      "latitude": 0.051295,
+      "longitude": -78.14123833333333,
+      "time": "20:48:51"
+    },
+    "-OVubg96eDh_YOGE_0kB": {
+      "address": "",
+      "date": "2025-07-23",
+      "estado": false,
+      "latitude": 0,
+      "longitude": 0,
+      "time": "23:08:59"
+    },
+    "-OVubjotFRTTWtZO5E2b": {
+      "address": "Guadalupana, Cayambe, Ecuador",
+      "date": "2025-07-23",
+      "estado": false,
+      "latitude": 0.027786666666666668,
+      "longitude": -78.15504666666668,
+      "time": "23:09:14"
+    },
+    "-OVueQVvZlH8GBRdd1Ii": {
+      "address": "Panamericana norte Km 50, Ecuador",
+      "date": "2025-07-23",
+      "estado": false,
+      "latitude": 0.016601666666666667,
+      "longitude": -78.16257833333334,
+      "time": "23:20:58"
+    },
+    "-OVuh-ScH39hIuOZc682": {
+      "address": "Panamericana norte Km 50, Ecuador",
+      "date": "2025-07-23",
+      "estado": false,
+      "latitude": 0.016561666666666666,
+      "longitude": -78.162565,
+      "time": "23:32:13"
+    },
+    "-OVumgXjBmCSx3bmIHG6": {
+      "address": "Panamericana norte Km 50, Ecuador",
+      "date": "2025-07-23",
+      "estado": true,
+      "latitude": 0.016556666666666667,
+      "longitude": -78.16259333333333,
+      "time": "23:57:04"
+    },
+    "-OVvF55wzDP-5TALV87g": {
+      "address": "",
+      "date": "2025-07-24",
+      "estado": false,
+      "latitude": 0,
+      "longitude": 0,
+      "time": "02:05:30"
+    },
+    "-OVxykaisksoE24oqLeX": {
+      "address": "",
+      "date": "2025-07-24",
+      "estado": false,
+      "latitude": 0,
+      "longitude": 0,
+      "time": "14:48:38"
+    },
+    "-OVyqqpftGe7a1AHK5u_": {
+      "address": "",
+      "date": "2025-07-24",
+      "estado": false,
+      "latitude": 0,
+      "longitude": 0,
+      "time": "18:53:43"
+    },
+    "-OVyqwBEy7rvSZkLbFgQ": {
+      "address": "3V25+J8H, Av. Luis Cordero, Cayambe, Ecuador",
+      "date": "2025-07-24",
+      "estado": false,
+      "latitude": 0.051451666666666666,
+      "longitude": -78.14112833333334,
+      "time": "18:54:05"
+    },
+    "-OVyrp1E89ViPJKZWMcf": {
+      "address": "3V25+J8H, Av. Luis Cordero, Cayambe, Ecuador",
+      "date": "2025-07-24",
+      "estado": false,
+      "latitude": 0.05146833333333333,
+      "longitude": -78.14122,
+      "time": "18:57:58"
+    },
+    "-OVytL4FPdJrq5OEWBkR": {
+      "address": "3V25+J8H, Av. Luis Cordero, Cayambe, Ecuador",
+      "date": "2025-07-24",
+      "estado": false,
+      "latitude": 0.05142166666666667,
+      "longitude": -78.14124166666667,
+      "time": "19:04:36"
+    },
+    "-OVywsNHvQhRzFu0VNw1": {
+      "address": "3V25+G92, Av. Luis Cordero, Cayambe, Ecuador",
+      "date": "2025-07-24",
+      "estado": false,
+      "latitude": 0.05128666666666667,
+      "longitude": -78.14122166666667,
+      "time": "19:20:03"
+    },
+    "-OVz2O2BUheIRcICgLN0": {
+      "address": "3V25+J8H, Av. Luis Cordero, Cayambe, Ecuador",
+      "date": "2025-07-24",
+      "estado": false,
+      "latitude": 0.05138666666666667,
+      "longitude": -78.14124333333332,
+      "time": "19:48:29"
+    },
+    "-OVz7Y3sHZJN9QOS9oy4": {
+      "address": "2VJ3+XM4, Cayambe, Ecuador",
+      "date": "2025-07-24",
+      "estado": false,
+      "latitude": 0.03231572,
+      "longitude": -78.14580086,
+      "time": "20:11:02"
+    },
+    "-OW2MRjKayTXbVlj0EcI": {
+      "address": "",
+      "date": "2025-07-25",
+      "estado": false,
+      "latitude": 0,
+      "longitude": 0,
+      "time": "15:54:37"
+    },
+    "-OW2Oaljx8AnppGpAFjJ": {
+      "address": "Panamericana norte Km 50, Ecuador",
+      "date": "2025-07-25",
+      "estado": false,
+      "latitude": 0.016535,
+      "longitude": -78.16263000000001,
+      "time": "16:04:02"
+    },
+    "-OW2j6dIkx5GsvD1iZz6": {
+      "address": "Vía Sin Nombre, Ecuador",
+      "date": "2025-07-25",
+      "estado": false,
+      "latitude": 0.0144717,
+      "longitude": -78.1389532,
+      "time": "17:38:00"
+    },
+    "-OW3JgEcu3zVb1FHyDK0": {
+      "address": "Panamericana norte Km 50, Ecuador",
+      "date": "2025-07-25",
+      "estado": false,
+      "latitude": 0.016566666666666667,
+      "longitude": -78.16263166666666,
+      "time": "20:22:11"
+    },
+    "-OW4Bz-gwP_3Mt6ixoxP": {
+      "address": "Vía Sin Nombre, Ecuador",
+      "date": "2025-07-26",
+      "estado": false,
+      "latitude": 0.0144723,
+      "longitude": -78.138957,
+      "time": "00:28:06"
+    },
+    "-OW4FHqzKpfoelJw9WfM": {
+      "address": "",
+      "date": "2025-07-26",
+      "estado": false,
+      "latitude": 0,
+      "longitude": 0,
+      "time": "00:42:34"
+    },
+    "-OW4FVtQtZ6Z9Skoh4qP": {
+      "address": "",
+      "date": "2025-07-26",
+      "estado": false,
+      "latitude": 0,
+      "longitude": 0,
+      "time": "00:43:32"
+    },
+    "-OW4FmosAqPi65rwnzJV": {
+      "address": "",
+      "date": "2025-07-26",
+      "estado": false,
+      "latitude": 0,
+      "longitude": 0,
+      "time": "00:44:47"
+    },
+    "-OW4G-Iy-UjvemZRL9CG": {
+      "address": "Vía Sin Nombre, Ecuador",
+      "date": "2025-07-26",
+      "estado": true,
+      "latitude": 0.014398433333333332,
+      "longitude": -78.13888539999999,
+      "time": "00:45:40"
     }
   },
   "contactos": {
-    "p8tlr9XnMhWka1UPavvDnoKWkR13": {
-      "-OVPMRJeJyWeCLPztEyr": {
-        "id": "-OVPMRJeJyWeCLPztEyr",
+    "C8t7NqqH6kY74llOUBW8QWshA7i1": {
+      "-OVueHbGiPRGwdIQkO50": {
+        "id": "-OVueHbGiPRGwdIQkO50",
         "nombre": "Figaro",
         "numero": "+593988493858"
+      }
+    },
+    "KtqjN2ruuMSvtSyrOBw8yuVl7TF3": {
+      "-OVjuIGdkVRqSUjffs1K": {
+        "id": "-OVjuIGdkVRqSUjffs1K",
+        "nombre": "💥La pulgosa💥",
+        "numero": "+593968809537"
+      }
+    },
+    "fv2QfrrmgXM975e3ZGPjWAtim122": {
+      "-OW2OZaSXPnU7JCMOt1I": {
+        "id": "-OW2OZaSXPnU7JCMOt1I",
+        "nombre": "Livia ♥️",
+        "numero": "099 226 9457"
       }
     }
   },
   "emergencyState": true,
   "ledState": 1,
   "ubicaciones": {
-    "-OVPCpSAin_InEZPbvMv": {
-      "description": "Parque la remonta",
-      "estado": false,
-      "ip": "1",
-      "lat": "0.055511",
-      "lng": "-78.139422",
-      "name": "La Remonta1",
-      "remonta": 0,
-      "timestamp": "2025-07-21T02:42:35.754Z"
-    },
-    "-OVPD7h-AMVMo5BKI2xD": {
-      "description": "Alarma el Hospital General",
-      "hospital": 1,
-      "ip": "2",
-      "lat": 0.034021,
-      "lng": -78.145398,
-      "name": "El Hospital",
-      "timestamp": "2025-07-17T21:09:30.771Z"
-    },
-    "-OVeC52D9MtrJ1_5HgAZ": {
-      "description": "ihugyub",
-      "ip": "192.168.1.1",
-      "lat": "23456",
-      "lng": "1234567",
-      "name": "DIRECCIÓN DE DESARROLLO PRODUCTIVO Y EMPRENDIMIENTO"
-    },
     "-OVeornA5YmJepEQbCGj": {
       "description": "Parque la remonta",
       "estado": false,
       "ip": "1",
       "lat": "0.055511",
       "lng": "-78.139422",
-      "name": "La Grose",
-      "timestamp": "2025-07-21T02:32:39.689Z"
+      "name": "La Remonta",
+      "timestamp": "2025-07-25T00:53:18.560Z"
     },
-    "-OVinWzKH3EgcctOWjVr": {
-      "description": "hola",
+    "-OVjPRlPqA0qM1BHanHh": {
+      "alarmaActiva": true,
+      "description": "Instituto Nelson Torres ",
       "estado": false,
-      "ip": "192.168.1.1",
-      "lat": "-0.22985",
-      "lng": "-78.52495",
-      "name": "Mensaje Inicial",
-      "timestamp": "2025-07-21T21:05:16.084Z"
+      "ip": "4",
+      "lat": "0.051781",
+      "lng": "-78.141314",
+      "name": "INT",
+      "timestamp": "2025-07-25T00:51:45.186Z"
+    },
+    "-OVjWfEA2FQGlWqJfzG8": {
+      "alarmaActiva": true,
+      "description": "Complejo",
+      "estado": true,
+      "ip": "5",
+      "lat": "0.016612",
+      "lng": "-78.140852",
+      "name": "Juan Montalvo",
+      "timestamp": "2025-07-22T00:27:48.092Z"
+    },
+    "-OVjv6ZfOer87o4bVRSN": {
+      "description": "El puente ",
+      "estado": false,
+      "ip": "6",
+      "lat": "0.048712",
+      "lng": "-78.142395",
+      "name": "Rio Blanco",
+      "timestamp": "2025-07-22T02:18:57.699Z"
+    },
+    "-OVunPULL0PQmZdSss2l": {
+      "alarmaActiva": true,
+      "description": "Unidad educativa Cayambe",
+      "estado": true,
+      "ip": "7",
+      "lat": "0.018920",
+      "lng": "-78.161505",
+      "name": "Colegio Tecnico",
+      "timestamp": "2025-07-24T05:01:08.659Z"
+    },
+    "-OVyzmGZVViJam_uOqes": {
+      "alarmaActiva": true,
+      "description": "Alarma Hospital",
+      "estado": true,
+      "ip": "8",
+      "lat": "0.034106",
+      "lng": "-78.145923",
+      "name": "Hospital",
+      "timestamp": "2025-07-25T00:33:42.229Z"
+    },
+    "-OVz10z0oHesY910tXge": {
+      "description": "Redondel del Yaznan",
+      "estado": false,
+      "ip": "9",
+      "lat": "0.027175",
+      "lng": "-78.150840",
+      "name": "Yaznan",
+      "timestamp": "2025-07-25T00:43:30.885Z"
+    }
+  },
+  "usuario911": {
+    "-OVxljrM4J01gT8fDVmg": {
+      "cedula": "1755584361",
+      "contrasena": "omar1234",
+      "correo": "omigc4@gmail.com",
+      "nombre": "Omar",
+      "rol": "usuario",
+      "telefono": "1234567890"
+    },
+    "-OVyqzA3D-jqCTlFmDkB": {
+      "cedula": "1753651411",
+      "contrasena": "123456",
+      "correo": "bo2286979@gmail.com",
+      "nombre": "Brandon",
+      "rol": "usuario",
+      "telefono": "0998426729"
+    },
+    "-OVyrC9EUboNHMe3nqBF": {
+      "cedula": "1726110503",
+      "contrasena": "dar123",
+      "correo": "darwincampues2908@gmail.com",
+      "nombre": "Darwin",
+      "rol": "administrador",
+      "telefono": "0986265270"
+    },
+    "-OVytWTw2qGjNM53Rpcq": {
+      "cedula": "1729303857",
+      "contrasena": "Jm.leon18",
+      "correo": "jeniferleon1806@gmai.com",
+      "nombre": "Jenifer",
+      "rol": "usuario",
+      "telefono": "0983108146"
+    },
+    "-OVytpEUp8JOOVwgAq_Q": {
+      "cedula": "1729303857",
+      "contrasena": "Jm.leon18",
+      "correo": "jeniferleon1806@gmai.com",
+      "nombre": "Jenifer",
+      "rol": "administrador",
+      "telefono": "0983108146"
+    },
+    "-OVyvQ2B05l6l7FB6u_K": {
+      "cedula": "1728206242",
+      "contrasena": "admin123",
+      "correo": "stalynfg15@gmail.com",
+      "nombre": "Stalyn",
+      "rol": "administrador",
+      "telefono": "0968809537"
+    },
+    "-OW4B6JclMKVOD_fBp_V": {
+      "cedula": "1728206242",
+      "contrasena": "papufer456",
+      "correo": "stalynfg15@gmail.com",
+      "nombre": "Stalyn",
+      "rol": "administrador",
+      "telefono": "0968809537"
+    },
+    "-OW4F7Y18DDAVU_RpO-5": {
+      "cedula": "1728206242",
+      "contrasena": "12345678",
+      "correo": "admin@gmail.com",
+      "nombre": "Juan",
+      "rol": "administrador",
+      "telefono": "0968809537"
+    },
+    "-OWHK9cmAmBcy0xfyz3i": {
+      "cedula": "1234567890",
+      "contrasena": "omar12345",
+      "correo": "omarxdj4@gmail.com",
+      "nombre": "Omar",
+      "rol": "usuario",
+      "telefono": "1234567890"
     }
   }
 }
